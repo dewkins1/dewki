@@ -1,23 +1,261 @@
 {
   "mod_elements": [
     {
-      "name": "Re",
-      "type": "attribute",
-      "compiles": true,
+      "name": "AltarStoneBrick",
+      "type": "block",
+      "compiles": false,
       "locked_code": false,
-      "registry_name": "re",
+      "registry_name": "altar_stone_brick",
       "metadata": {
-        "files": []
+        "files": [
+          "src/main/resources/data/dewkins/loot_tables/blocks/altar_stone_brick.json",
+          "src/main/resources/assets/dewkins/models/item/altar_stone_brick.json",
+          "src/main/resources/assets/dewkins/blockstates/altar_stone_brick.json",
+          "src/main/java/net/mcreator/dewkins/block/AltarStoneBrickBlock.java",
+          "src/main/resources/assets/dewkins/models/block/altar_stone_brick.json"
+        ]
+      }
+    },
+    {
+      "name": "LightmaticLogic",
+      "type": "procedure",
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "lightmatic_logic",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dewkins/procedures/LightmaticLogicProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AltarSlab",
+      "type": "block",
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "altar_slab",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dewkins/block/AltarSlabBlock.java",
+          "src/main/resources/assets/dewkins/models/block/altar_slab_full.json",
+          "src/main/resources/data/dewkins/loot_tables/blocks/altar_slab.json",
+          "src/main/resources/assets/dewkins/models/item/altar_slab.json",
+          "src/main/resources/assets/dewkins/blockstates/altar_slab.json",
+          "src/main/resources/assets/dewkins/models/block/altar_slab_top.json",
+          "src/main/resources/assets/dewkins/models/block/altar_slab.json"
+        ]
+      }
+    },
+    {
+      "name": "AltarMagma",
+      "type": "block",
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "altar_magma",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dewkins/block/AltarMagmaBlock.java",
+          "src/main/resources/assets/dewkins/blockstates/altar_magma.json",
+          "src/main/resources/assets/dewkins/models/block/altar_magma.json",
+          "src/main/resources/data/dewkins/loot_tables/blocks/altar_magma.json",
+          "src/main/resources/assets/dewkins/models/item/altar_magma.json"
+        ]
+      }
+    },
+    {
+      "name": "AltarFirstLvl",
+      "type": "procedure",
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "altar_first_lvl",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dewkins/procedures/AltarFirstLvlProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AltarSecondLvl",
+      "type": "procedure",
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "altar_second_lvl",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dewkins/procedures/AltarSecondLvlProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FirstLogic",
+      "type": "procedure",
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "first_logic",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dewkins/procedures/FirstLogicProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SecondLogic",
+      "type": "procedure",
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "second_logic",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dewkins/procedures/SecondLogicProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AltarThirdLvl",
+      "type": "procedure",
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "altar_third_lvl",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dewkins/procedures/AltarThirdLvlProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "x",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "y",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "z",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "lightmatic",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "ox",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "oy",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "oz",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "AltarLvl",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "firstLogic",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "secondLogic",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "thirdLogic",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    }
+  ],
   "sound_elements": [],
-  "tag_elements": {},
+  "tag_elements": {
+    "BLOCKS:minecraft:slabs": [
+      "~CUSTOM:AltarSlab"
+    ],
+    "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:AltarMagma",
+      "~CUSTOM:AltarSlab",
+      "~CUSTOM:AltarStoneBrick"
+    ]
+  },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "attribute.dewkins.re": "Re"
+      "block.dewkins.altar_magma": "Altar Magma",
+      "block.dewkins.altar_slab": "Altar Slab",
+      "block.dewkins.altar_stone_brick": "Altar Stone Brick"
     }
   },
   "foldersRoot": {

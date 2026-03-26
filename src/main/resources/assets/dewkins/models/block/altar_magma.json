@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dewkins:block/magma_transparent",
+    "particle": "dewkins:block/magma_transparent"
+  },
+  "render_type": "translucent"
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "dewkins:block/altar_slab"
+    },
+    "type=top": {
+      "model": "dewkins:block/altar_slab_top"
+    },
+    "type=double": {
+      "model": "dewkins:block/altar_slab_full"
+    }
+  }
+}

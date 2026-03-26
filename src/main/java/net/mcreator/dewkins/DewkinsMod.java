@@ -3,21 +3,9 @@ package net.mcreator.dewkins;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
-import net.minecraftforge.network.simple.SimpleChannel;
-import net.minecraftforge.network.NetworkRegistry;
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.util.thread.SidedThreadGroups;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.FriendlyByteBuf;
-
-import net.mcreator.dewkins.init.DewkinsModAttributes;
+import net.mcreator.dewkins.init.DewkinsModTabs;
+import net.mcreator.dewkins.init.DewkinsModItems;
+import net.mcreator.dewkins.init.DewkinsModBlocks;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -39,7 +27,12 @@ public class DewkinsMod {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-		DewkinsModAttributes.REGISTRY.register(bus);
+		DewkinsModBlocks.REGISTRY.register(bus);
+
+		DewkinsModItems.REGISTRY.register(bus);
+
+		DewkinsModTabs.REGISTRY.register(bus);
+
 		// Start of user code block mod init
 		// End of user code block mod init
 	}
